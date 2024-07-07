@@ -3,15 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Birthday Surprise</title>
+    <title>Happy Birthday!</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="welcome">
-        <h1>Surprise Trip!</h1>
+        <h1>A Trip?</h1>
         <video src="destination-video.mp4" autoplay loop></video>
-        <button onclick="goToDetails()">See the Details</button>
+        <button onclick="showDetails()">See the Details</button>
     </div>
+    
+    <div class="details" id="details" style="display:none;">
+        <h2>Trip Details</h2>
+        <p>We are going to Paris!</p>
+        <button onclick="showCalendar()">See the Itinerary</button>
+    </div>
+    
+    <div class="calendar" id="calendar" style="display:none;">
+        <h2>Itinerary</h2>
+        <div id="calendar-container"></div>
+        <button onclick="showPreferences()">Select Preferences</button>
+    </div>
+    
+    <div class="preferences" id="preferences" style="display:none;">
+        <h2>Your Preferences</h2>
+        <form id="preferences-form" onsubmit="submitForm(event)">
+            <input type="text" name="preference1" placeholder="Preference 1">
+            <input type="text" name="preference2" placeholder="Preference 2">
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+    
+    <div class="message" id="message" style="display:none;">
+        <h2>Thank You!</h2>
+        <p>Your preferences have been submitted.</p>
+    </div>
+
     <script src="script.js"></script>
 </body>
 </html>
