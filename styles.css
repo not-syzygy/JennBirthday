@@ -23,25 +23,27 @@ body, html {
     height: 100%;
     background-color: var(--space-cadet);
     color: var(--oxford-blue);
+    perspective: 1000px;
 }
 
 .content {
     display: none;
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    max-width: 600px;
+    background-color: white;
     padding: 20px;
-    box-sizing: border-box;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    backface-visibility: hidden;
+    animation: slideIn 1s forwards;
 }
 
 .content.active {
-    display: flex;
-    animation: fadeIn 1s;
+    display: block;
 }
 
 button {
@@ -85,6 +87,17 @@ li {
     display: none;
     border: 2px solid var(--oxford-blue);
     border-radius: 10px;
+}
+
+@keyframes slideIn {
+    from {
+        transform: rotateY(-90deg);
+        opacity: 0;
+    }
+    to {
+        transform: rotateY(0);
+        opacity: 1;
+    }
 }
 
 @keyframes fadeIn {
