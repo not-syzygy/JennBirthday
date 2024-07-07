@@ -2,43 +2,45 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Happy Birthday!</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="welcome">
-        <h1>A Trip?</h1>
-        <video src="destination-video.mp4" autoplay loop></video>
-        <button onclick="showDetails()">See the Details</button>
+    <div class="container">
+        <section class="content" id="section1">
+            <h1>A happy birthday unto you.</h1>
+            <button onclick="nextSection('section2')">Next</button>
+        </section>
+        
+        <section class="content" id="section2">
+            <h1>My gift is a 3-5 day trip to Los Angeles (paid for by me).</h1>
+            <button onclick="nextSection('section3')">Next</button>
+        </section>
+        
+        <section class="content" id="section3">
+            <h1>I was going to surprise you with airplane tickets but you have the schedule availability of a royal family member so I require your input (they don't offer refunds).</h1>
+            <button onclick="nextSection('section4')">Next</button>
+        </section>
+        
+        <section class="content" id="section4">
+            <h1>Here are some reasons why L.A. could be fun:</h1>
+            <div class="slideshow">
+                <img src="la1.jpg" class="slide">
+                <img src="la2.jpg" class="slide">
+                <img src="la3.jpg" class="slide">
+            </div>
+            <button onclick="nextSection('section5')">Next</button>
+        </section>
+        
+        <section class="content" id="section5">
+            <h1>My research has led me to 2 potentially good windows, with some caveats:</h1>
+            <ul>
+                <li>October 5-9: Contradicting information on whether or not you have a cheer comp in this time</li>
+                <li>October 19-23: Would miss cheer practices right before state</li>
+            </ul>
+        </section>
     </div>
-    
-    <div class="details" id="details" style="display:none;">
-        <h2>Trip Details</h2>
-        <p>We are going to Paris!</p>
-        <button onclick="showCalendar()">See the Itinerary</button>
-    </div>
-    
-    <div class="calendar" id="calendar" style="display:none;">
-        <h2>Itinerary</h2>
-        <div id="calendar-container"></div>
-        <button onclick="showPreferences()">Select Preferences</button>
-    </div>
-    
-    <div class="preferences" id="preferences" style="display:none;">
-        <h2>Your Preferences</h2>
-        <form id="preferences-form" onsubmit="submitForm(event)">
-            <input type="text" name="preference1" placeholder="Preference 1">
-            <input type="text" name="preference2" placeholder="Preference 2">
-            <button type="submit">Submit</button>
-        </form>
-    </div>
-    
-    <div class="message" id="message" style="display:none;">
-        <h2>Thank You!</h2>
-        <p>Your preferences have been submitted.</p>
-    </div>
-
     <script src="script.js"></script>
 </body>
 </html>
