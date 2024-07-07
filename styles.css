@@ -1,15 +1,28 @@
+/* Color Palette */
+:root {
+    --orchid-pink: #d4afb9ff;
+    --dark-purple: #412234ff;
+    --english-violet: #6d466bff;
+    --ash-gray: #c2cfb2ff;
+    --olivine: #8db580ff;
+}
+
+/* Background Gradients */
 body, html {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
     height: 100%;
     overflow: hidden;
+    background: radial-gradient(circle, var(--orchid-pink), var(--dark-purple), var(--english-violet), var(--ash-gray), var(--olivine));
 }
 
 .container {
     position: relative;
     width: 100%;
     height: 100%;
+    background-color: var(--ash-gray);
+    color: var(--dark-purple);
 }
 
 .content {
@@ -36,6 +49,28 @@ button {
     font-size: 16px;
     margin-top: 20px;
     cursor: pointer;
+    background-color: var(--english-violet);
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: var(--olivine);
+}
+
+h1 {
+    color: var(--dark-purple);
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    color: var(--dark-purple);
+}
+
+li {
+    margin: 10px 0;
 }
 
 .slideshow {
@@ -48,6 +83,8 @@ button {
 .slide {
     width: 100%;
     display: none;
+    border: 2px solid var(--dark-purple);
+    border-radius: 10px;
 }
 
 @keyframes fadeIn {
