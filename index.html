@@ -1,46 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Happy Birthday!</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <div class="container">
-        <section class="content" id="section1">
-            <h1>A happy birthday unto you.</h1>
-            <button onclick="nextSection('section2')">Next</button>
-        </section>
-        
-        <section class="content" id="section2">
-            <h1>My gift is a 3-5 day trip to Los Angeles (paid for by me).</h1>
-            <button onclick="nextSection('section3')">Next</button>
-        </section>
-        
-        <section class="content" id="section3">
-            <h1>I was going to surprise you with airplane tickets but you have the schedule availability of a royal family member so I require your input (they don't offer refunds).</h1>
-            <button onclick="nextSection('section4')">Next</button>
-        </section>
-        
-        <section class="content" id="section4">
-            <h1>Here are some reasons why L.A. could be fun:</h1>
-            <div class="slideshow">
-                <img src="la1.jpg" class="slide">
-                <img src="la2.jpg" class="slide">
-                <img src="la3.jpg" class="slide">
-            </div>
-            <button onclick="nextSection('section5')">Next</button>
-        </section>
-        
-        <section class="content" id="section5">
-            <h1>My research has led me to 2 potentially good windows, with some caveats:</h1>
-            <ul>
-                <li>October 5-9: Contradicting information on whether or not you have a cheer comp in this time</li>
-                <li>October 19-23: Would miss cheer practices right before state</li>
-            </ul>
-        </section>
-    </div>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Happy birthday</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <canvas id="c"></canvas>
     <script src="script.js"></script>
-</body>
+  </body>
 </html>
