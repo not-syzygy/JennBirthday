@@ -387,14 +387,46 @@ function updateTextWithDelay(textArray, delay, callback) {
     }, delay);
 }
 
+function showImage(imageId, delay) {
+    return new Promise((resolve) => {
+        setTimeout(() => {
+            let img = document.getElementById(imageId);
+            img.style.display = 'block';
+            setTimeout(() => {
+                img.style.opacity = '1';
+                setTimeout(resolve, 5000); // Show each image for 5 seconds
+            }, 10);
+        }, delay);
+    });
+}
+
+function hideImage(imageId) {
+    let img = document.getElementById(imageId);
+    img.style.opacity = '0';
+    setTimeout(() => {
+        img.style.display = 'none';
+    }, 1000); // Wait for fade out transition
+}
+
 // Initial 'HAPPY BIRTHDAY!' Message
 animate();
-
 // Text Block #2
-updateTextWithDelay(["YOU'VE WON", "A TRIP", "TO L.A.!"], 10000, () => {
+updateTextWithDelay(["YOU'VE WON", "A TRIP", "TO L.A.!", "(NOT A SCAM)"], 10000, () => {
     // Text Block #3
-    updateTextWithDelay(["THIS WAS", "MEANT TO BE", "REAL TICKETS"], 10000, () => {
+    updateTextWithDelay(["I WAS GOING", "TO SURPRISE", "YOU WITH", "REAL PLANE", "TICKETS"], 10000, () => {
 		// Text Block #4
-		updateTextWithDelay(["BUT SINCE", "YOU HAVE", "THE SCHEDULE", "OF A", "ROYAL FAMILY", "MEMBER,"], 10000);
+		updateTextWithDelay(["BUT SINCE", "YOU HAVE", "THE SCHEDULE", "OF A", "ROYAL FAMILY", "MEMBER,"], 10000, () => {
+			// Text Block #5
+			updateTextWithDelay(["YOU GET", "TO HELP", "PICK THE", "DATES, &", "THIS DUMB", "CODE THING"], 10000, () => {
+				// Text Block #6
+				updateTextWithDelay(["HERE'S A", "PREVIEW OF", "WHAT IT COULD", "LOOK LIKE"], 10000, async () => {
+                    // Disneyland Image
+                    await showImage('disneylandImage', 10000);
+                    hideImage('disneylandImage');
+                    await showImage('manhattanBeachImage', 1000);
+                    hideImage('manhattanBeachImage');
+                });
+            });
+        });            
 	});
 });
