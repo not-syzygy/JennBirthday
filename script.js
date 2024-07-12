@@ -417,14 +417,18 @@ updateTextWithDelay(["YOU'VE WON", "A TRIP", "TO L.A.!", "(NOT A SCAM)"], 10000,
 		// Text Block #4
 		updateTextWithDelay(["BUT SINCE", "YOU HAVE", "THE SCHEDULE", "OF A", "ROYAL FAMILY", "MEMBER,"], 10000, () => {
 			// Text Block #5
-			updateTextWithDelay(["YOU GET", "TO HELP", "PICK THE", "DATES, &", "THIS DUMB", "CODE THING"], 10000, () => {
+			updateTextWithDelay(["YOU GET", "THIS DUMB", "CODE THING", "&", "TO HELP ME", "PICK THE", "DATES",], 10000, () => {
 				// Text Block #6
-				updateTextWithDelay(["HERE'S A", "PREVIEW OF", "WHAT IT COULD", "LOOK LIKE"], 10000, async () => {
+				updateTextWithDelay(["HERE'S A", "PREVIEW OF", "WHAT IT", "COULD", "LOOK LIKE"], 10000, async () => {
                     // Disneyland Image
                     await showImage('disneylandImage', 10000);
                     hideImage('disneylandImage');
                     await showImage('manhattanBeachImage', 1000);
                     hideImage('manhattanBeachImage');
+                    await showImage('gettyVillaImage', 1000);
+                    hideImage('gettyVillaImage');
+                    await showImage('concertHallImage', 1000);
+                    hideImage('concertHallImage');
                 });
             });
         });            
