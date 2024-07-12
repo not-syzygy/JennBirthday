@@ -238,6 +238,10 @@ Letter.prototype.step = function () {
 
         ctx.strokeStyle = this.lightColor.replace('light', 80);
 
+        // Draw the letter in all stages
+        ctx.fillStyle = this.lightColor.replace('light', 70);
+        ctx.fillText(this.char, this.x + this.dx, this.y + this.dy);
+
         if (this.spawning) {
 
             ++this.tick;
@@ -276,6 +280,10 @@ Letter.prototype.step = function () {
 
             this.cx += this.vx;
             this.cy += this.vy += opts.upFlow;
+
+            // Update letter position to follow the balloon
+            this.x = this.cx;
+            this.y = this.cy + this.size;
 
             ctx.fillStyle = this.color;
             ctx.beginPath();
