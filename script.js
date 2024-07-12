@@ -415,9 +415,9 @@ updateTextWithDelay(["YOU'VE WON", "A TRIP", "TO L.A.!", "(NOT A SCAM)"], 10000,
     // Text Block #3
     updateTextWithDelay(["I WAS GOING", "TO SURPRISE", "YOU WITH", "REAL PLANE", "TICKETS"], 10000, () => {
 		// Text Block #4
-		updateTextWithDelay(["BUT SINCE", "YOU HAVE", "THE SCHEDULE", "OF A", "ROYAL FAMILY", "MEMBER,"], 10000, () => {
+		updateTextWithDelay(["BUT SINCE", "YOU HAVE THE", "SCHEDULE", "OF A", "ROYAL FAMILY", "MEMBER,"], 10000, () => {
 			// Text Block #5
-			updateTextWithDelay(["YOU GET", "THIS DUMB", "CODE THING", "&", "TO HELP ME", "PICK THE", "DATES",], 10000, () => {
+			updateTextWithDelay(["YOU GET", "THIS DUMB", "CODE THING,", "&", "TO HELP ME", "PICK THE", "DATES",], 10000, () => {
 				// Text Block #6
 				updateTextWithDelay(["HERE'S A", "PREVIEW OF", "WHAT IT", "COULD", "LOOK LIKE"], 10000, async () => {
                     // Disneyland Image
