@@ -35,7 +35,7 @@ var w = c.width = window.innerWidth,
         fireworkShardAddedSize: 3,
         gravity: .1,
         upFlow: -.1,
-        letterContemplatingWaitTime: 720,
+        letterContemplatingWaitTime: 1000,
         balloonSpawnTime: 40,
         balloonBaseInflateTime: 20,
         balloonAddedInflateTime: 20,
@@ -419,17 +419,17 @@ function hideImage(imageId) {
 // Initial 'HAPPY BIRTHDAY!' Message
 animate();
 // Text Block #2
-updateTextWithDelay(["YOU'VE WON", "A TRIP", "TO L.A.!", "(NOT A SCAM)"], 10000, () => {
+updateTextWithDelay(["YOU'VE WON", "A TRIP", "TO L.A.!", "(NOT A SCAM)"], 15000, () => {
     // Text Block #3
-    updateTextWithDelay(["I WAS GOING", "TO SURPRISE", "YOU WITH", "REAL PLANE", "TICKETS"], 10000, () => {
+    updateTextWithDelay(["I WAS GOING", "TO SURPRISE", "YOU WITH", "REAL PLANE", "TICKETS"], 15000, () => {
 		// Text Block #4
-		updateTextWithDelay(["BUT SINCE", "YOU HAVE THE", "SCHEDULE", "OF A", "ROYAL FAMILY", "MEMBER,"], 10000, () => {
+		updateTextWithDelay(["BUT SINCE", "YOU HAVE THE", "SCHEDULE", "OF A", "ROYAL FAMILY", "MEMBER,"], 15000, () => {
 			// Text Block #5
-			updateTextWithDelay(["YOU GET", "THIS DUMB", "CODE THING,", "&", "TO HELP ME", "PICK THE", "DATES",], 10000, () => {
+			updateTextWithDelay(["YOU GET", "THIS DUMB", "CODE THING,", "&", "TO HELP ME", "PICK THE", "DATES",], 15000, () => {
 				// Text Block #6
-				updateTextWithDelay(["HERE'S A", "PREVIEW OF", "WHAT IT", "COULD", "LOOK LIKE"], 10000, async () => {
+				updateTextWithDelay(["HERE'S A", "PREVIEW OF", "WHAT IT", "COULD", "LOOK LIKE"], 15000, async () => {
                     // Disneyland Image
-                    await showImage('disneylandImage', 10000);
+                    await showImage('disneylandImage', 12000);
                     hideImage('disneylandImage');
                     await showImage('manhattanBeachImage', 1000);
                     hideImage('manhattanBeachImage');
