@@ -106,8 +106,8 @@ Letter.prototype.step = function () {
             var linearProportion = this.tick / this.reachTime,
                 armonicProportion = Math.sin(linearProportion * TauQuarter),
 
-                x = linearProportion * this.x,
-                y = hh + armonicProportion * this.fireworkDy;
+                x = this.x,
+                y = h - (linearProportion * (h - this.y));
 
             if (this.prevPoints.length > opts.fireworkPrevPoints)
                 this.prevPoints.shift();
